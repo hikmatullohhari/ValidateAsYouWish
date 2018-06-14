@@ -43,7 +43,7 @@ validator.errors();
 ```
 
 #### Basic Usage Result Example
-![example1](https://github.com/hikmatullohhari/ValidateAsYouWish/blob/master/screenshot/basic1.jpg)
+![example1](https://github.com/hikmatullohhari/ValidateAsYouWish/blob/master/screenshot/basic.jpg)
 ![example1](https://github.com/hikmatullohhari/ValidateAsYouWish/blob/master/screenshot/basic2.jpg)
 
 #### Custom using HTML

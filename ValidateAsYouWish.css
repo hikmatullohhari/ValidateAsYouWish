@@ -1,0 +1,17 @@
+/* @author Hikmatulloh Hari Mukti */
+.vayw-message {
+    display: none;
+}
+
+.vayw-invalid {
+    background-color: #CE5454;
+    border: 1px solid transparent;
+    border-radius: 3px 4px 4px 3px;
+    color: #FFF;
+    display: inline-block;
+    padding: 3px 10px;
+    position: relative;
+    transition: 0.15s ease-out;
+    white-space: pre;
+    z-index: 1;
+}

@@ -14,6 +14,7 @@
 #### Basic Usage
 
 ```html
+<link rel="stylesheet" href="css/boostrap.min.css"> <!-- optional -->
 <link rel="stylesheet" href="ValidateAsYouWish/ValidateAsYouWish.css">
 <div id="form-id">
     <div class="form-group">
@@ -29,6 +30,7 @@
         <input class="form-control" type="text" name="address" required>
     </div>
 </div>
+<script src="js/jquery.min.js"></script> <!-- required -->
 <script src="ValidateAsYouWish/ValidateAsYouWish.js"></script>
 ```
 
@@ -97,7 +99,7 @@ var validator = $("#form-id").validator({
              */
 
             /* example 
-             * return $(e).attr("name") + "custom message";
+             * return $(e).attr("name") + " custom message";
              * 
              * */
         }
@@ -134,7 +136,7 @@ var validator = $("#form-id").validator({
              *          "</div>"+
              *        "</div>";
              * 
-             * {%message}, will be replaced with message
+             * {%message}, will be replaced with message if declared
              * */
         }
     }

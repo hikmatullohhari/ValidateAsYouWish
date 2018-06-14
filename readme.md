@@ -15,7 +15,7 @@
 
 ```html
 <link rel="stylesheet" href="css/boostrap.min.css"> <!-- optional -->
-<link rel="stylesheet" href="ValidateAsYouWish/ValidateAsYouWish.css">
+<link rel="stylesheet" href="css/ValidateAsYouWish.css">
 <div id="form-id">
     <div class="form-group">
         <label>Full Name</label>
@@ -31,7 +31,7 @@
     </div>
 </div>
 <script src="js/jquery.min.js"></script> <!-- required -->
-<script src="ValidateAsYouWish/ValidateAsYouWish.js"></script>
+<script src="js/ValidateAsYouWish.js"></script>
 ```
 
 ```javascript

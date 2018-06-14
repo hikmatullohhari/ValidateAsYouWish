@@ -84,7 +84,7 @@
             for(var key in _parameters.messages){
                 if($(element).attr(key) != undefined){
                     isMessageDeclared = true;
-                    message = _parameters.messages[key].replace("{%name}", name);
+                    message = _parameters.messages[key](element).replace("{%name}", name);
                     break;
                 }
             }
@@ -116,7 +116,7 @@
                 if($(element).attr(key) != undefined){
                     isTemplateDeclared = true;
                     var templateContainer = $(_context).find("[for="+name+"][vayw-template]");
-                    template = $(_parameters.templates[key].replace("{%message}", message)).attr({
+                    template = $(_parameters.templates[key](element).replace("{%message}", message)).attr({
                         "vayw-template": ""
                     });
                     if(templateContainer.length > 0){

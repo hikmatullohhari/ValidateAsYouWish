@@ -90,8 +90,17 @@ validator.errors();
 ```javascript
 var validator = $("#form-id").validator({
     ...
-    message: {
-        required: "custom message for required from parameters"
+    messages: {
+        required: function(e){ /* e for element */
+            /* your logic here
+             * return string
+             */
+
+            /* example 
+             * return $(e).attr("name") + "custom message";
+             * 
+             * */
+        }
     },
     ...
 });
@@ -112,12 +121,22 @@ var validator = $("#form-id").validator({
 ```javascript
 var validator = $("#form-id").validator({
     ...
-    template: {
-        required: "<div class='some-class'>"+
-                        "<div class='another-div'>"+
-                            "{%message}"+
-                        "</div>"+
-                    "</div>"
+    templates: {
+        required: function(e){ /* e for element */
+            /* your logic here
+             * return string of html
+             */
+
+            /* example 
+             * return "<div class='some-class'>"+
+             *          "<div class='another-div'>"+
+             *             "{%message}"+
+             *          "</div>"+
+             *        "</div>";
+             * 
+             * {%message}, will be replaced with message
+             * */
+        }
     }
     ...
 });
@@ -139,7 +158,7 @@ var validator = $("#form-id").validator({
 var validator = $("#form-id").validator({
     ...
     rules: {
-        new_rule: function(e){ // e for element
+        new_rule: function(e){ /* e for element */
             /* your logic here
              * return bool
              */ 
@@ -152,7 +171,7 @@ var validator = $("#form-id").validator({
              */
         },
         another_rule: function(e){
-            /* * */
+            /* return bool */
         },
     }
     ...
@@ -166,23 +185,33 @@ var validator = $("#form-id").validator({
             return true;
         },
         other_rule: function(e){
-            /* * */
+            /* return bool */
         }
         ..
     },
     ...
 });
 ```
-> #5. Combined multiple parameter
+> #5. Combine multiple parameter
 ```javascript
 var validator = $("#form-id").validator({
     rules: {
         new_rule: function(e){
-            /* * */
+            /* return bool */
         },
         ...
     },
-    message: "new_rule message using parameters",
-    template: "<div class='custom-using-parameters'>{%message}</div>"
+    messages: {
+        new_rule: function(e){
+            /* return string */
+        },
+        ...
+    },
+    templates: {
+        new_rule: function(e){
+            /* return string of html */
+        },
+        ...
+    }
 });
 ```
